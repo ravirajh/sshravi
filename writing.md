@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Writing
-permalink: /writing/
+title: Blog
+permalink: /Blog/
 ---
 
 <h1 class="text-3xl font-bold mb-12 tracking-tight">Writing</h1>
