@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Blog
-permalink: /Blog/
+permalink: /blog/
 ---
 
 <h1 class="text-3xl font-bold mb-12 tracking-tight">Blog</h1>
