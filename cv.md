@@ -1,7 +1,7 @@
 ---
 layout: default
-title: CV
-permalink: /cv/
+title: resume
+permalink: /resume/
 ---
 
 <div class="max-w-3xl mx-auto">
