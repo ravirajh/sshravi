@@ -1,14 +1,12 @@
 title: Raviraj Halarnekar
 email: ravirajrh@outlook.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Network Engineer | Tech Enthusiast | Photographer
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+description: Network Engineer & System Admin
+baseurl: ""
+url: ""
 twitter_username: ravirajrh
 github_username: ravirajrh
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-cayman # We will override this, but this keeps GitHub happy
 plugins:
   - jekyll-seo-tag
