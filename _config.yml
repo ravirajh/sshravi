@@ -12,4 +12,4 @@ plugins:
   - jekyll-seo-tag
 
 # URL Structure Setting
-permalink: /blog/:title/
+permalink: /cheatsheet/:title/
