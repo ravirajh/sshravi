@@ -4,7 +4,7 @@ title: cheatsheet
 permalink: /cheatsheet/
 ---
 
-<h1 class="text-3xl font-bold mb-12 tracking-tight">cheatsheet</h1>
+<h1 class="text-3xl font-bold mb-12 tracking-tight">Config Guides</h1>
 
 <div class="flex flex-col gap-10">
   {% for post in site.posts %}
