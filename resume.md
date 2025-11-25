@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Raviraj Halarnekar - Network Engineer
-permalink: /
+permalink: /resume/
 ---
 
 # Raviraj Halarnekar
