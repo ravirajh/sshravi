@@ -23,8 +23,9 @@
                 },
                 extend: {
                     colors: {
+                        // Your custom grays are kept, but we will use 'black' utility for the bg
                         gray: {
-                            900: '#111111',
+                            900: '#111111', 
                             50: '#F9FAFB',
                         }
                     },
@@ -35,9 +36,9 @@
                                 color: theme('colors.gray.700'),
                                 maxWidth: 'none', // Allow container to control width
                                 lineHeight: '1.6',
-                                'h1': { fontSize: '2.25rem', fontWeight: '800', marginBottom: '0.5rem', marginTop: '0' }, // Name
-                                'h2': { fontSize: '1.5rem', fontWeight: '700', marginTop: '1.5em', marginBottom: '0.75em', borderBottom: '1px solid #e5e7eb', paddingBottom: '0.25em' }, // Sections
-                                'h3': { fontSize: '1.125rem', fontWeight: '600', marginTop: '1.25em', marginBottom: '0.25em' }, // Job Titles
+                                'h1': { fontSize: '2.25rem', fontWeight: '800', marginBottom: '0.5rem', marginTop: '0' },
+                                'h2': { fontSize: '1.5rem', fontWeight: '700', marginTop: '1.5em', marginBottom: '0.75em', borderBottom: '1px solid #e5e7eb', paddingBottom: '0.25em' },
+                                'h3': { fontSize: '1.125rem', fontWeight: '600', marginTop: '1.25em', marginBottom: '0.25em' },
                                 'h4': { fontSize: '1rem', fontWeight: '600', marginTop: '1em' },
                                 'ul': { paddingLeft: '1.25em', marginTop: '0.5em', marginBottom: '0.5em' },
                                 'li': { marginTop: '0.25em', marginBottom: '0.25em' },
@@ -54,7 +55,7 @@
                         invert: {
                             css: {
                                 color: theme('colors.gray.300'),
-                                'h2': { borderColor: theme('colors.gray.700') },
+                                'h2': { borderColor: theme('colors.gray.800') }, // Darkened border for AMO contrast
                                 a: {
                                     color: theme('colors.white'),
                                     '&:hover': { color: theme('colors.gray.300') },
@@ -80,23 +81,24 @@
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: transparent; }
         ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 4px; }
-        .dark ::-webkit-scrollbar-thumb { background: #374151; }
+        .dark ::-webkit-scrollbar-thumb { background: #333333; } /* Slightly darker thumb for AMOLED */
 
-        /* Print Styles - Crucial for ATS */
+        /* Print Styles */
         @media print {
             body { background-color: white !important; color: black !important; }
-            .no-print { display: none !important; } /* Hides Nav/Footer */
+            .no-print { display: none !important; }
             main { padding: 0 !important; margin: 0 !important; max-width: 100% !important; }
             .prose { max-width: 100% !important; }
-            /* Remove dark mode styles in print */
+            /* Reset dark mode styles in print */
             .dark .prose-invert { --tw-prose-body: #000 !important; --tw-prose-headings: #000 !important; --tw-prose-links: #000 !important; --tw-prose-bold: #000 !important; --tw-prose-counters: #000 !important; --tw-prose-bullets: #000 !important; --tw-prose-hr: #000 !important; --tw-prose-quotes: #000 !important; --tw-prose-quote-borders: #000 !important; --tw-prose-captions: #000 !important; --tw-prose-code: #000 !important; --tw-prose-pre-code: #000 !important; --tw-prose-pre-bg: #000 !important; --tw-prose-th-borders: #000 !important; --tw-prose-td-borders: #000 !important; }
         }
     </style>
 </head>
 
-<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300 flex flex-col min-h-screen selection:bg-gray-200 dark:selection:bg-gray-700">
+<!-- Changed dark:bg-gray-900 to dark:bg-black for AMOLED Pitch Black -->
+<body class="bg-white text-gray-900 dark:bg-black dark:text-gray-100 transition-colors duration-300 flex flex-col min-h-screen selection:bg-gray-200 dark:selection:bg-gray-800">
 
-    <!-- Navigation (Hidden on Print) -->
+    <!-- Navigation -->
     <nav class="w-full max-w-3xl mx-auto px-6 py-8 flex justify-between items-center no-print">
         <a href="{{ site.baseurl }}/" class="font-bold text-lg tracking-tighter hover:opacity-70 transition-opacity">RH</a>
 
@@ -118,14 +120,11 @@
     </nav>
 
     <!-- Main Content -->
-    <!-- Added 'prose' classes to automatically style Markdown content -->
-    <!-- Added 'prose-sm' -->
-<main class="flex-grow w-full max-w-3xl mx-auto px-6 pt-4 pb-20 prose prose-sm prose-slate dark:prose-invert ...">
-    <!-- <main class="flex-grow w-full max-w-3xl mx-auto px-6 pt-4 pb-20 prose prose-slate dark:prose-invert hover:prose-a:text-blue-600 dark:hover:prose-a:text-blue-400"> -->
+    <main class="flex-grow w-full max-w-3xl mx-auto px-6 pt-4 pb-20 prose prose-sm prose-slate dark:prose-invert">
         {{ content }}
     </main>
 
-    <!-- Footer (Hidden on Print) -->
+    <!-- Footer -->
     <footer class="w-full max-w-3xl mx-auto px-6 py-10 border-t border-gray-100 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400 no-print">
         <span>&copy; {{ site.time | date: '%Y' }} Raviraj Halarnekar</span>
         <div class="flex gap-4 mt-2 md:mt-0">
