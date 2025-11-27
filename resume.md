@@ -66,7 +66,7 @@ Network Engineer with hands-on experience in technical support, network operatio
 
 ## Education
 
-### Bachelor of Engineering (Computer Engineering)
+### Bachelor's Degree in Computer Engineering
 **Padre Conceição College of Engineering** | *Goa University*
 
 ### Diploma in Computer Engineering
