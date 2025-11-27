@@ -42,7 +42,7 @@ Network Engineer with hands-on experience in technical support, network operatio
 *   **Operations & SLA Management:** Executed technical Change Requests (CRs) and maintained monthly configuration backups, consistently achieving **95%+ SLA compliance** for network uptime and incident resolution.
 *   **Audit:** 
 
-### Network System Engineer
+### Network Systems Engineer
 **Fahrenheit Hotels and Resorts** | *Calangute, Goa* | *Jan 2017 – Nov 2021*
 
 *   **Network Operations:** Managed the end-to-end campus network infrastructure, ensuring 24/7 uptime for critical administrative systems and high-density guest networks.
